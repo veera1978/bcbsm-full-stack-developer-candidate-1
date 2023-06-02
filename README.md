@@ -1,6 +1,6 @@
 # BCBSM Full Stack Developer Candiadte Coding Exercise
 
-##Requirements:
+## Requirements:
 1.	Create a single page web application with a login screen (username, password)
 2.	Demonstrate user login and authentication
 3.	Upon login present member with ability to upload a document
@@ -12,7 +12,7 @@ UploadUser
 UploadDate
 5.	Display success message on web page and show document list
 
-##Tech Stack:  
+## Tech Stack:  
 Springboot  
 Angular  
 MondoDB
