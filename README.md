@@ -12,8 +12,8 @@ UploadUser
 UploadDate
 5.	Display success message on web page and show document list
 
-Tech Stack:
-Springboot
-Angular
+Tech Stack:  
+Springboot  
+Angular  
 MondoDB
 ![image](https://github.com/thechuckfrank/bcbsm-full-stack-developer-candidate/assets/558795/55737826-637a-4b09-82ed-affda7e46c97)
