@@ -16,4 +16,4 @@ UploadDate
 ## Tech Stack:  
 Springboot  
 Angular  
-MondoDB
+MongoDB
