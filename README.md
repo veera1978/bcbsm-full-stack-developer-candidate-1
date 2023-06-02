@@ -11,7 +11,7 @@ Document
 UploadUser  
 UploadDate
 5.	Display success message on web page and show document list
-6.	Upload project to this repository
+6.	Fork this repository and create PR with your code changes
 
 ## Tech Stack:  
 Springboot  
