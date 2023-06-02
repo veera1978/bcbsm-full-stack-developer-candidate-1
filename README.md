@@ -17,4 +17,3 @@ UploadDate
 Springboot  
 Angular  
 MondoDB
-![image](https://github.com/thechuckfrank/bcbsm-full-stack-developer-candidate/assets/558795/55737826-637a-4b09-82ed-affda7e46c97)
