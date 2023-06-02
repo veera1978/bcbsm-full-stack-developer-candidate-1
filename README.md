@@ -5,10 +5,10 @@
 2.	Demonstrate user login and authentication
 3.	Upon login present member with ability to upload a document
 4.	Create a REST service to receive the document and store the document in a database with the below structure:
-DocumentID 
-DocumentName 
-Document 
-UploadUser 
+DocumentID  
+DocumentName  
+Document  
+UploadUser  
 UploadDate
 5.	Display success message on web page and show document list
 
