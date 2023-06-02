@@ -11,6 +11,7 @@ Document
 UploadUser  
 UploadDate
 5.	Display success message on web page and show document list
+6.	Upload project to this repository
 
 ## Tech Stack:  
 Springboot  
