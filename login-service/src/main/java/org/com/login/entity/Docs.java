@@ -6,44 +6,44 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "documents")
 public class Docs {
     @Id
-    private String DocumentID;
-	private String DocumentName;
+    private String documentID;
+	private String documentName;
     public byte[] getDocument() {
-		return Document;
+		return document;
 	}
 	public void setDocument(byte[] document) {
-		Document = document;
+		this.document = document;
 	}
-	private byte[] Document;
-    private String UploadUser;
-    private String UploadDate;
+	private byte[] document;
+    private String uploadUser;
+    private String uploadDate;
     public String getDocumentID() {
-		return DocumentID;
+		return documentID;
 	}
 	public void setDocumentID(String documentID) {
-		DocumentID = documentID;
+		this.documentID = documentID;
 	}
 	public String getDocumentName() {
-		return DocumentName;
+		return documentName;
 	}
 	public void setDocumentName(String documentName) {
-		DocumentName = documentName;
+		this.documentName = documentName;
 	}
 	
 	/*
 	 * public void setDocument(byte[] bs) { Document = bs; }
 	 */
 	public String getUploadUser() {
-		return UploadUser;
+		return uploadUser;
 	}
 	public void setUploadUser(String uploadUser) {
-		UploadUser = uploadUser;
+		this.uploadUser = uploadUser;
 	}
 	public String getUploadDate() {
-		return UploadDate;
+		return uploadDate;
 	}
 	public void setUploadDate(String uploadDate) {
-		UploadDate = uploadDate;
+		this.uploadDate = uploadDate;
 	}
      
     
