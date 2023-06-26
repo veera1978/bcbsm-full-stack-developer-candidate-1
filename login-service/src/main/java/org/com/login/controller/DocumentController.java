@@ -15,8 +15,9 @@ public class DocumentController {
     @Autowired
     private DocumentService documentService;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/upload")
-    public Docs uploadDocument(@RequestParam("Document") MultipartFile file, @RequestParam("DocumentName") String name, @RequestParam("UploadUser") String user,@RequestParam("UploadDate") String date) throws IOException {
+    public Docs uploadDocument(@RequestParam("document") MultipartFile file, @RequestParam("documentName") String name, @RequestParam("uploadUser") String user,@RequestParam("uploadDate") String date) throws IOException {
         Docs document = new Docs();
         document.setDocumentName(name);
         document.setDocument(file.getBytes());

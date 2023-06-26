@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  http: any;
-
-  //constructor(private formBuilder: FormBuilder) { }
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+  
+  constructor(private formBuilder: FormBuilder, private router: Router,private http: HttpClient) { }
 
 
   ngOnInit() {
@@ -38,7 +37,7 @@ export class LoginComponent implements OnInit {
   };
  
     // Send the login request to the server
-    this.http.post('/login', loginRequest).subscribe(
+    this.http.post('http://localhost:8080/login', loginRequest).subscribe(
       (response: any) => {
         // Handle successful login response
         console.log('Login successful:', response);

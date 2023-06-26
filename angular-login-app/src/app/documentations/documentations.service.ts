@@ -7,7 +7,7 @@ import { Document } from './documentations.model';
   providedIn: 'root'
 })
 export class DocumentService {
-  private apiUrl = '/api/documents/listdocument';
+  private apiUrl = 'http://localhost:8080/api/documents/listdocument';
 
   constructor(private http: HttpClient) { }
 

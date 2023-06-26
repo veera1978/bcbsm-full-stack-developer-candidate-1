@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { DocumentationFormComponent } from './documentation-form/documentation-form.component';
-import { DocumentationsComponent } from './documentations/documentations.component';
+import { DocumentsComponent } from './documentations/documentations.component';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'signup', component: SignupComponent },{ path: 'login', component: LoginComponent },
+  {path: 'documentation-form', component: DocumentationFormComponent}, {path: 'documentations', component: DocumentsComponent}
+];
 
 @NgModule({
   declarations: [
@@ -14,11 +21,15 @@ import { DocumentationsComponent } from './documentations/documentations.compone
     SignupComponent,
     LoginComponent,
     DocumentationFormComponent,
-    DocumentationsComponent
+    DocumentsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

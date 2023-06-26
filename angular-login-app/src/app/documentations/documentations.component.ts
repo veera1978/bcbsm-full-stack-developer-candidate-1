@@ -4,8 +4,8 @@ import { DocumentService } from './documentations.service';
 
 @Component({
   selector: 'app-documents',
-  templateUrl: './documents.component.html',
-  styleUrls: ['./documents.component.css']
+  templateUrl: './documentations.component.html',
+  styleUrls: ['./documentations.component.css']
 })
 export class DocumentsComponent implements OnInit {
   documents!: Document[];
