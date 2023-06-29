@@ -1,18 +1,18 @@
 package org.com.login.configuration;
 
 import org.springframework.context.annotation.Configuration;
-/*import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;*/
+import org.springframework.http.MediaType;
+import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+
+
 @Configuration
 @EnableWebMvc
-public class CorsConfig implements WebMvcConfigurer {
-    
-	@Override
+public class CorsConfig implements WebMvcConfigurer{
+    @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins("http://localhost:4200")  // Replace with the URL of your Angular app
@@ -21,14 +21,12 @@ public class CorsConfig implements WebMvcConfigurer {
                 .allowCredentials(true);
     }
     
-	/*
-	 * @Bean public PasswordEncoder passwordEncoder() { return new
-	 * BCryptPasswordEncoder(); }
-	 */
-	/*
-	 * @Bean BCryptPasswordEncoder passwordEncoder() {
-	 * 
-	 * return new BCryptPasswordEncoder(); }
-	 */
+     @Override
+    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+        // Configure content negotiation strategy here
+        configurer.defaultContentType(MediaType.APPLICATION_JSON);
+    }
+    
+ 
     
 }
