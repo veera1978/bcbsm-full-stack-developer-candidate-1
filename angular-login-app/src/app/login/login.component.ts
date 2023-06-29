@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: ['', [Validators.required, Validators.minLength(6)]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      username: ['', [Validators.required]],
+      password: ['', [Validators.required]]
     });
   }
 
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     this.http.post('http://localhost:8080/login', loginRequest).subscribe(
       (response: any) => {
         // Handle successful login response
-        console.log('Login successful:', response);
+        console.log('Login successful:');
   
         // Reset the form
         this.loginForm.reset();
