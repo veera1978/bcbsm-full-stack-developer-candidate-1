@@ -1,0 +1,15 @@
+.property {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .key {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .value {
+    font-weight: normal;
+  }
+  

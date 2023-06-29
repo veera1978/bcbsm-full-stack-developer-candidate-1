@@ -8,7 +8,8 @@ import { DocumentService } from './documentations.service';
   styleUrls: ['./documentations.component.css']
 })
 export class DocumentsComponent implements OnInit {
-  documents!: Document[];
+  //documents!: Document[];
+  documents: Map<string, Document> = new Map<string, Document>();
 
   constructor(private documentService: DocumentService) { }
 
@@ -17,13 +18,10 @@ export class DocumentsComponent implements OnInit {
   }
 
   fetchDocuments() {
-    this.documentService.getDocuments().subscribe(
-      (documents: Document[]) => {
-        this.documents = documents;
-      },
-      (error: any) => {
-        console.error('Error fetching documents:', error);
-      }
-    );
+    this.documentService.getDocuments().subscribe((data: Map<string, Document>) => {
+      this.documents = data;
+    });
   }
 }
+
+
