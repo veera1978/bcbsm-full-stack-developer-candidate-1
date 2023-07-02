@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../auth/AuthService';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   
-  constructor(private formBuilder: FormBuilder, private router: Router,private http: HttpClient) { }
+  constructor(private formBuilder: FormBuilder, private router: Router,private http: HttpClient,private authService: AuthService) { }
 
 
   ngOnInit() {
@@ -36,6 +37,7 @@ export class LoginComponent implements OnInit {
     password: password
   };
  
+  this.authService.login(username,password);
     // Send the login request to the server
     this.http.post('http://localhost:8080/login', loginRequest).subscribe(
       (response: any) => {

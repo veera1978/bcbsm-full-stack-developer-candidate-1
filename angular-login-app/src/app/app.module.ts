@@ -9,10 +9,11 @@ import { DocumentsComponent } from './documentations/documentations.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth/auth-guard.service';
 
 const appRoutes: Routes = [
   { path: 'signup', component: SignupComponent },{ path: 'login', component: LoginComponent },
-  {path: 'documentation-form', component: DocumentationFormComponent}, {path: 'documentations', component: DocumentsComponent}
+  {path: 'documentation-form', component: DocumentationFormComponent}, {path: 'documentations', component: DocumentsComponent,  canActivate: [AuthGuard]}
 ];
 
 @NgModule({
@@ -31,7 +32,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
